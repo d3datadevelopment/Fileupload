@@ -1,0 +1,38 @@
+body.cl-account_order div.panel {
+    margin-bottom: 5px;
+}
+
+body.cl-account_order div.panel-upload {
+    margin-bottom: 35px;
+}
+
+body.cl-d3uploadmanager div.lineBox.clear {
+    margin-bottom: 30px !important;
+}
+
+body.cl-d3uploadmanager td.filecell {
+  border-bottom: 1px solid white;
+}
+body.cl-d3uploadmanager tr.listitem1 th,
+body.cl-d3uploadmanager tr.listitem1 td {
+    background-color: #FAFAFA;
+    padding: 2px 3px;
+}
+body.cl-d3uploadmanager tr.listitem1 td.filecell {
+    border-color: #F0F0F0;
+}
+body.cl-d3uploadmanager tr.listitem2 th,
+body.cl-d3uploadmanager tr.listitem2 td {
+    background-color: #F0F0F0;
+    padding: 2px 3px;
+}
+body.cl-d3uploadmanager tr.listitem2 td.filecell {
+    border-color: #FAFAFA;
+}
+body.cl-d3uploadmanager div.uploadcomment {
+    display: none;
+}
+body.cl-d3uploadmanager textarea.uploadcomment {
+    width: 350px;
+    height: 70px;
+}

@@ -1,0 +1,13 @@
+production:
+  - "jshint:module"
+  - "less:module"
+  - "less:module_unminified"
+  - "uglify:module"
+
+development:
+  - "less:module_sourcemap"
+  - "less:module_unminified"
+  - "uglify:module"
+
+default:
+  - "production"
