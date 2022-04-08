@@ -30,14 +30,16 @@ $sMetadataVersion = '2.0';
  */
 $aModule = array(
     'id'           => 'd3fileupload',
-    'title'        => (class_exists(d3utils::class) ? d3utils::getInstance()->getD3Logo() : 'D&sup3;') . ' Fileupload',
+    'title'        => 
+        '<svg style="height:1em;width:1em"><image xlink:href="https://logos.oxidmodule.com/d3logo.svg" style="height:1em;width:1em" /></svg> '.
+        'Fileupload',
     'description'  => array(
         'de'            => 'Dieses Modul stellt im OXID eShop einen Uploadmanager f&uuml;r den Kunden nach dem '.
             'Bestellvorgang bereit.',
         'en'            => '',
     ),
     'thumbnail'    => 'picture.png',
-    'version'      => '5.0.0.0',
+    'version'      => '5.0.1.0',
     'author'       => 'D&sup3; Data Development',
     'email'        => 'support@shopmodule.com',
     'url'          => 'http://www.oxidmodule.com/',
@@ -102,45 +104,7 @@ $aModule = array(
     ),
 
     'events'      => array(
-        'onActivate'    => '\D3\Fileupload\Setup\Events::onActivate',
-        'onDeactivate'  => '\D3\Fileupload\Setup\Events::onDeactivate'
-    ),
-
-    'd3FileRegister'    => array(
-        'd3/fileupload/IntelliSenseHelper.php',
-        'd3/fileupload/metadata.php',
-        'd3/fileupload/Application/translations/de/d3fileupload_lang.php',
-        'd3/fileupload/Application/translations/en/d3fileupload_lang.php',
-        'd3/fileupload/Application/views/admin/de/d3fileupload_lang.php',
-        'd3/fileupload/Application/views/admin/en/d3fileupload_lang.php',
-        'd3/fileupload/public/d3_fileupload_cron.php',
-
-        'd3/fileupload/Application/Model/d3fileupload.php',
-        'd3/fileupload/Application/Model/d3fileupload_db.php',
-        'd3/fileupload/Application/Model/d3fileupload_file.php',
-        'd3/fileupload/Application/Model/d3fileupload_setting.php',
-        'd3/fileupload/Application/Model/exceptions/d3fileuploadexception.php',
-        'd3/fileupload/Application/Model/exceptions/d3fileupload_cronunavailableexception.php',
-
-        'd3/fileupload/Setup/Events.php',
-
-        // ToDo: try to remove these items in later connector release, can determine from default chapters in metadata
-        'd3/fileupload/Modules/Application/Model/d3_oxarticle_fileupload.php',
-        'd3/fileupload/Modules/Application/Model/d3_oxorder_fileupload.php',
-        'd3/fileupload/Modules/Application/Model/d3_oxemail_fileupload.php',
-        'd3/fileupload/Application/Controller/d3uploadmanager.php',
-        'd3/fileupload/Application/Controller/d3fileupload_response.php',
-        'd3/fileupload/Application/Controller/Admin/d3fileupload_orderupload.php',
-        'd3/fileupload/Application/Controller/Admin/d3fileupload_licence.php',
-        'd3/fileupload/Application/Controller/Admin/d3fileupload_main.php',
-        'd3/fileupload/Application/Controller/Admin/d3fileupload_settings.php',
-        'd3/fileupload/Application/Controller/Admin/d3fileupload_list.php',
-        'd3/fileupload/Setup/d3fileupload_update.php',
-        'd3/fileupload/Application/Controller/Admin/d3_cfg_fileuploadlog.php',
-        'd3/fileupload/Application/Controller/Admin/d3_cfg_fileuploadlog_list.php',
-    ),
-
-    'd3SetupClasses'    => array(
-        \D3\Fileupload\Setup\d3fileupload_update::class,
-    ),
+        'onActivate'    => '\D3\ModCfg\setup\Events::onActivate',
+        'onDeactivate'  => '\D3\ModCfg\setup\Events::onDeactivate',
+    )
 );
